@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;800&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    margin: 0;
+    line-height: 1.5;
+}
+body, input, textarea{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+}
+.container{
+    margin: auto;
+    padding: 0 10%;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.align-items-center{
+    align-items: center;
+}
+.justify-content-between{
+    justify-content: space-between;
+}
+
+/* header */
+header{
+    padding: 2% 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+}
+header .brand-name a{
+    font-size: 2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 900;
+    color: white;
+    letter-spacing: 2px;
+}
+header .nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+header .nav ul li{
+    display: inline-block;
+    margin-left: 2em;
+    transition: all 0.5s ease;
+}
+header .nav ul li a{
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+    text-transform: uppercase;
+}
+header .nav ul li a:hover{
+    color: #bce6eb;
+}
+
+
+/* Home-section */
+.home-section{
+    min-height: 100vh;
+    background-image: url(./images/rabbit-5639615_640.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+.home-section::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.7;
+    z-index: -1;
+}
+.home-section .row{
+    min-height: 100vh;
+}
+.home-section .home-content{
+    flex: 0 0 100%;
+    width: 100%;
+    text-align: end;
+}
+.home-section .home-content h2{
+    font-size: 4.5rem;
+    color: white;
+}
+.bold{
+    font-weight: bolder;
+    text-transform: uppercase;
+} 
+.light{
+    font-weight: lighter;
+}
+.shape1{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border: 2px solid white;
+    top: 30%;
+    left: 10%;
+    animation: ani-01 5s linear infinite;
+}
+.shape2{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 2px solid white;
+    top: 55%;
+    left: 20%;
+    animation: ani-02 5s linear infinite;
+}
+.shape3{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 2px solid white;
+    top: 80%;
+    left: 10%;
+    animation: ani-01 5s linear infinite;
+}
+@keyframes ani-01{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes ani-02{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+
